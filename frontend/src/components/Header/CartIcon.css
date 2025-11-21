@@ -1,0 +1,81 @@
+/* =======================
+   CART ICON (MODERNO)
+======================= */
+
+.cart-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    width: 42px;
+    height: 42px;
+  
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 10%);
+  
+    font-size: 1.4rem;
+    color: var(--primary);
+  
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .cart-icon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgb(0 0 0 / 15%);
+  }
+  
+  /* El circulito rojo del contador */
+  .cart-count {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+  
+    background-color: var(--primary);
+    color: white;
+  
+    font-size: 0.7rem;
+    padding: 2px 6px;
+  
+    border-radius: 50%;
+    font-weight: bold;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    min-width: 18px;
+    height: 18px;
+  
+    box-shadow: 0 2px 6px rgb(0 0 0 / 20%);
+    pointer-events: none;
+  }
+  
+  .cart-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.10);
+    color: var(--primary);            /* color del stroke SVG */
+    transition: transform .18s ease, box-shadow .18s ease;
+    text-decoration: none;
+  }
+  
+  .cart-circle svg {
+    display: block;                   /* evita pequeños descuadres */
+    width: 22px;
+    height: 22px;
+  }
+  
+  .cart-circle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+  }
+  

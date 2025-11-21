@@ -1,0 +1,73 @@
+/* ===========================
+   RESET BÁSICO & VARIABLES
+   =========================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary: #d64b2a;
+    --beige: #e4c59e;
+    --dark: #222;
+    --light: #fff;
+    --background: #ffffff;
+    --text-primary: #d64b2a;
+    --text-secondary: #ffffff;
+    --radius: 12px;
+    --shadow: 0 4px 10px rgba(0,0,0,0.06);
+    --transition: 0.2s ease-in-out;
+    --font-title: "Playfair Display", serif;
+    --font-text: "Montserrat", sans-serif;
+  }
+  
+  /* BASE */
+  body {
+    font-family: var(--font-text);
+    background-color: var(--background);
+    color: var(--dark);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+  }
+  
+  /* Encabezados globales */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-title);
+  }
+  
+  /* Utilidades globales */
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem 0;
+    font-weight: 700;
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--primary);
+    width: fit-content;
+    padding-bottom: 6px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Botones globales */
+  .btn-primary {
+    background-color: var(--primary);
+    color: var(--light);
+    border: none;
+    border-radius: var(--radius);
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: background-color var(--transition), transform var(--transition);
+  }
+  
+  .btn-primary:hover {
+    background-color: #bb361e;
+    transform: translateY(-2px);
+  }
+  

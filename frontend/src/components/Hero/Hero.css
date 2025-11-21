@@ -1,0 +1,123 @@
+/* =========================
+   HERO
+   ========================= */
+   .hero {
+    position: relative;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    background: #000;
+  }
+  
+  .hero-pics {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hero-pics img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease, transform 0.6s ease, filter 0.4s ease;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  .hero-pics img.active {
+    opacity: 1;
+  }
+  
+  .hero .overlay-box {
+    position: relative;
+    z-index: 4;
+    background: rgba(246, 241, 241, 0.627);
+    padding: 2rem;
+    border-radius: 12px;
+    color: var(--primary);
+    max-width: 600px;
+    backdrop-filter: blur(3px);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.679);
+  }
+  
+  .hero h1,
+  .hero .main-title {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Botón principal */
+  .hero button {
+    z-index: 6;
+    position: relative;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.4rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.3s ease;
+  }
+  
+  .hero button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+    background-color: var(--primary-beige);
+    color: var(--primary);
+  }
+  
+  /* Flechas del slider */
+  /* Asegúrate de colocarlo al final de style.css para sobreescribir a Bootstrap */
+  button.arrow {
+    position: absolute;
+    top: 50%;
+    -webkit-appearance: none; /* quitar apariencia por defecto en Safari */
+    appearance: none;
+    background: rgba(255,255,255,0.85) !important; /* fondo por defecto */
+    color: var(--primary) !important; /* color del icono */
+    padding: 0.5rem 0.9rem !important;
+    font-size: 1.6rem !important;
+    border-radius: 50% !important;
+    border: none !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer !important;
+    z-index: 6 !important;
+    transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+    /* mantener la posición original (no mover en hover) */
+    transform: translateY(-50%);
+    /* evitar que Bootstrap agregue padding/margen/focus que "mueva" */
+    line-height: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+  }
+  
+  /* posición lateral (igual que ya tienes) */
+  #prev.arrow.left { left: 25px !important; }
+  #next.arrow.right { right: 25px !important; }
+  
+  /* hover: cambia sólo color y fondo — sin transform ni scale */
+  button.arrow:hover,
+  button.arrow:active {
+    background: var(--primary) !important;
+    color: #fff !important;
+    transform: translateY(-50%); /* reafirmar que no cambia */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25) !important;
+  
+  }
